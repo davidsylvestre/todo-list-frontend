@@ -23,7 +23,7 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /.js[x]?$/,
+      test: /\.jsx?$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
       query: {
@@ -35,7 +35,7 @@ module.exports = {
       loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })
     }, {
       test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
-      loader: 'file'
+      loader: 'file-loader'
     }]
   }
 }
